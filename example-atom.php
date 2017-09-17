@@ -1,5 +1,5 @@
 <?php
-use Grunjol\Feed\Feed;
+use Dansup\Feed\Feed;
 
 header('Content-Type: text/html; charset=utf-8');
 

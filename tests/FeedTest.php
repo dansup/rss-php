@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Grunjol\Feed\Feed;
-use Grunjol\Feed\FeedException;
+use Dansup\Feed\Feed;
+use Dansup\Feed\FeedException;
 
 final class FeedTest extends TestCase
 {
@@ -17,11 +17,11 @@ final class FeedTest extends TestCase
     {
         $rss = Feed::load($this->rssUrl);
 
-        $this->assertInstanceOf('\Grunjol\Feed\Feed', $rss);
+        $this->assertInstanceOf('\Dansup\Feed\Feed', $rss);
 
         $rss = Feed::load($this->atomUrl);
 
-        $this->assertInstanceOf('\Grunjol\Feed\Feed', $rss);
+        $this->assertInstanceOf('\Dansup\Feed\Feed', $rss);
     }
 
     public function testInvalidRss()
@@ -50,7 +50,7 @@ final class FeedTest extends TestCase
     {
         $rss = Feed::loadRss($this->dcDateUrl);
 
-        $this->assertInstanceOf('Grunjol\Feed\Feed', $rss);
+        $this->assertInstanceOf('Dansup\Feed\Feed', $rss);
     }
 
     public function testGetXml()
@@ -89,7 +89,7 @@ final class FeedTest extends TestCase
     {
         $rss = Feed::loadRss($this->authRssUrl, ['auth' => ['user-testing-get-rss', 'do-rss-unit-testing']]);
 
-        $this->assertInstanceOf('\Grunjol\Feed\Feed', $rss);
+        $this->assertInstanceOf('\Dansup\Feed\Feed', $rss);
     }
 
     public function testUnAuthorization()

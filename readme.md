@@ -10,10 +10,10 @@ This project is a forked of David Grudl's rs-php https://github.com/dg/rss-php
 
 It requires PHP 5.5 and Guzzle 6.1
 and is licensed under the New BSD License. You can obtain the latest version from
-our [GitHub repository](https://github.com/grunjol/rss-php/releases) or install it via Composer:
+our [GitHub repository](https://github.com/dansup/rss-php/releases) or install it via Composer:
 
 ```
-php composer.phar require grunjol/rss-php
+php composer.phar require dansup/rss-php
 ```
 
 Usage
@@ -78,3 +78,4 @@ Feed::$client = new Client(['handler' => $stack]);
 -----
 (c) David Grudl, 2008 (http://davidgrudl.com)
 (c) grunjol, 2017 (https://github.com/grunjol)
+(c) dansup, 2017 (https://github.com/dansup)

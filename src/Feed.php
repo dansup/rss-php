@@ -1,9 +1,9 @@
 <?php
-namespace Grunjol\Feed;
+namespace Dansup\Feed;
 /**
  * RSS for PHP - small and easy-to-use library for consuming an RSS Feed
  *
- * @copyright  Copyright (c) 2008 David Grudl, 2017 grunjol
+ * @copyright  Copyright (c) 2008 David Grudl, 2017 grunjol, 2017 dansup
  * @license    New BSD License
  * @version    1.3
  */
@@ -169,7 +169,7 @@ class Feed
 	private static function loadXml($url, $options)
 	{
 		if ($data = trim(self::httpRequest($url, $options))) {
-    		return new \SimpleXMLElement($data, LIBXML_NOWARNING | LIBXML_NOERROR);
+    		return new \SimpleXMLElement($data, LIBXML_NOWARNING | LIBXML_NOERROR | LIBXML_NOCDATA);
 		}
 
 		throw new FeedException('Cannot load feed.');
